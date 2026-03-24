@@ -1,0 +1,6 @@
+po_id,vendor,amount,requester,stage,entered_stage_date,created_date
+NS-PO-5001,GreenLeaf Packaging,24300,Sophie Anderson,approval,2026-03-11,2026-03-08
+NS-PO-5002,EcoSupply Direct,8900,Ryan Mitchell,sent,2026-03-16,2026-03-14
+NS-PO-5003,Sustainable Materials Co,55100,Hannah Kim,received,2026-03-07,2026-02-20
+NS-PO-5004,CleanTech Components,13700,Jake Roberts,draft,2026-03-22,2026-03-22
+NS-PO-5005,BioSource Industries,37800,Olivia Davis,invoiced,2026-03-19,2026-03-01

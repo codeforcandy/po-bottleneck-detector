@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PO Bottleneck Detector</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Bar -->
+  <header id="top-bar" class="top-bar">
+    <h1 class="top-bar-title">PO Bottleneck Detector</h1>
+    <div class="top-bar-stats">
+      <button class="stat-card critical" data-filter="critical" aria-label="Filter critical POs">
+        <span class="stat-label">Critical</span>
+        <span class="stat-value" id="critical-count">--</span>
+      </button>
+      <button class="stat-card warning" data-filter="warning" aria-label="Filter stalling POs">
+        <span class="stat-label">Stalling</span>
+        <span class="stat-value" id="warning-count">--</span>
+      </button>
+      <button class="stat-card healthy" data-filter="healthy" aria-label="Filter on-track POs">
+        <span class="stat-label">On Track</span>
+        <span class="stat-value" id="healthy-count">--</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Error/Warning Banner -->
+  <div id="error-banner" class="banner" style="display:none" role="alert" aria-live="polite"></div>
+
+  <!-- Loading Indicator -->
+  <div id="loading" class="loading" style="display:none">
+    <div class="loading-ring"></div>
+    <span>Analyzing PO data...</span>
+  </div>
+
+  <!-- Drop Zone (empty state) -->
+  <div id="drop-zone" class="drop-zone">
+    <div class="ghost-nodes" aria-hidden="true">
+      <div class="ghost-node g1"></div>
+      <div class="ghost-node g2"></div>
+      <div class="ghost-node g3"></div>
+      <div class="ghost-node g4"></div>
+      <div class="ghost-node g5"></div>
+    </div>
+    <div class="drop-zone-content">
+      <div class="drop-zone-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8891b0" stroke-width="1.5">
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+        </svg>
+      </div>
+      <p class="drop-zone-text">Drop your PO export here</p>
+      <p class="drop-zone-hint">or click to browse &middot; .csv files only</p>
+    </div>
+    <input type="file" id="file-input" accept=".csv" hidden>
+  </div>
+
+  <!-- Visualization Container -->
+  <div id="viz-container" class="viz-container" style="display:none"></div>
+
+  <!-- Legend -->
+  <div id="legend" class="legend">
+    <div class="legend-item"><span class="legend-dot healthy"></span> On track</div>
+    <div class="legend-item"><span class="legend-dot warning"></span> Stalling (3-7d)</div>
+    <div class="legend-item"><span class="legend-dot critical"></span> Critical (7d+)</div>
+    <div class="legend-hint">Node size = time stuck</div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+po_id,vendor,amount,requester,stage,entered_stage_date,created_date
+ORA-PO-10001,CloudServe Solutions,95000,Alex Thompson,received,2026-03-05,2026-02-12
+ORA-PO-10002,DataStream Inc,18500,Nina Patel,approval,2026-03-15,2026-03-13
+ORA-PO-10003,NetCore Systems,42000,Marcus Johnson,sent,2026-03-19,2026-03-17
+ORA-PO-10004,CyberTech Partners,7800,Diana Cruz,draft,2026-03-23,2026-03-23
+ORA-PO-10005,Infinite IT Supply,63200,William Chen,received,2026-03-08,2026-02-25

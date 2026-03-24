@@ -1,0 +1,21 @@
+po_id,vendor,amount,requester,stage,entered_stage_date,created_date
+PO-2024-4891,Acme Industrial Supply,47200,Maria Chen,received,2026-03-06,2026-02-15
+PO-2024-4892,Global Parts Corp,12800,James Wilson,approval,2026-03-12,2026-03-10
+PO-2024-4893,TechSupply Direct,8500,Sarah Park,sent,2026-03-18,2026-03-15
+PO-2024-4894,Metro Components,156000,David Liu,received,2026-03-10,2026-02-28
+PO-2024-4895,FastShip Logistics,3200,Emily Brown,draft,2026-03-22,2026-03-22
+PO-2024-4896,"Precision Tools, Inc.",22400,Robert Kim,approval,2026-03-01,2026-02-20
+PO-2024-4897,Eastern Metals Co,67500,Anna Torres,invoiced,2026-03-20,2026-02-10
+PO-2024-4898,Pacific Distributors,15600,Chris Nguyen,received,2026-03-14,2026-03-05
+PO-2024-4899,Allied Manufacturing,41000,Patricia Hayes,approval,2026-03-19,2026-03-16
+PO-2024-4900,Summit Industrial,9800,Michael Chang,sent,2026-03-21,2026-03-19
+PO-2024-4901,Coastal Supply Chain,28700,Jessica Rivera,closed,2026-03-01,2026-01-15
+PO-2024-4902,Heritage Parts Ltd,5400,Thomas Wright,draft,2026-03-23,2026-03-23
+PO-2024-4903,Diamond Fixtures,89200,Laura Martinez,received,2026-03-02,2026-02-18
+PO-2024-4904,NorthStar Logistics,17300,Kevin Anderson,invoiced,2026-03-22,2026-03-10
+PO-2024-4905,BrightWorks Supply,6100,Rachel Cooper,sent,2026-03-15,2026-03-12
+PO-2024-4906,Century Components,34500,Steven Garcia,approval,2026-03-08,2026-03-05
+PO-2024-4907,Pacific Rim Trading,71800,Michelle Lee,received,2026-03-04,2026-02-22
+PO-2024-4908,Midwest Industrial,11200,Daniel Taylor,draft,2026-03-20,2026-03-20
+PO-2024-4909,Atlas Supply Group,43600,Jennifer White,sent,2026-03-17,2026-03-14
+PO-2024-4910,Premier Hardware,7900,Brandon Moore,invoiced,2026-03-21,2026-03-15
