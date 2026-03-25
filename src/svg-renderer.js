@@ -65,7 +65,7 @@ export function renderSVG(container, nodes, width, height) {
   nodeGroups.append('circle')
     .attr('r', (d) => d.radius)
     .attr('fill', (d) => d.color)
-    .attr('fill-opacity', (d) => d.opacity * 0.4)
+    .attr('fill-opacity', (d) => (d.filteredOpacity ?? d.opacity) * 0.4)
     .attr('stroke', (d) => d.color)
     .attr('stroke-width', (d) => d.severity === 'critical' ? 1.5 : 1)
     .attr('stroke-dasharray', (d) => {
@@ -73,7 +73,7 @@ export function renderSVG(container, nodes, width, height) {
       if (d.borderStyle === 'dotted') return '2,2';
       return 'none';
     })
-    .attr('stroke-opacity', (d) => d.opacity);
+    .attr('stroke-opacity', (d) => d.filteredOpacity ?? d.opacity);
 
   // Day count label for warning/critical
   nodeGroups.filter((d) => d.severity !== 'healthy')
