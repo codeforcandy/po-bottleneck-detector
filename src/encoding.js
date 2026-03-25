@@ -83,13 +83,15 @@ export function computeBorderStyle(severity) {
 export function encodeNode(po, maxDays = 30, now = new Date()) {
   const daysStuck = computeDaysStuck(po.entered_stage_date, now);
   const severity = computeSeverity(daysStuck, po.stage);
+  // Closed POs are done — always minimal size regardless of time since closure
+  const isClosed = po.stage === 'closed';
   return {
     ...po,
     daysStuck,
     severity,
-    radius: computeRadius(daysStuck, maxDays),
+    radius: isClosed ? 6 : computeRadius(daysStuck, maxDays),
     color: computeColor(severity),
-    opacity: computeOpacity(severity),
+    opacity: isClosed ? 0.15 : computeOpacity(severity),
     borderStyle: computeBorderStyle(severity),
   };
 }
