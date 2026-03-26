@@ -454,20 +454,37 @@ body {
 
 /* ── SVG Node Pulse Classes ─────────────────── */
 
-.po-node.critical circle {
+.po-node.critical .node-circle {
   animation: svg-pulse-critical 1.8s ease-in-out infinite;
 }
 
-.po-node.warning circle {
+.po-node.warning .node-circle {
   animation: svg-pulse-warning 3s ease-in-out infinite;
 }
 
 @keyframes svg-pulse-critical {
   0%, 100% { filter: drop-shadow(0 0 6px rgba(255, 77, 106, 0.4)); }
-  50% { filter: drop-shadow(0 0 16px rgba(255, 77, 106, 0.7)); }
+  50% { filter: drop-shadow(0 0 20px rgba(255, 77, 106, 0.8)); }
 }
 
 @keyframes svg-pulse-warning {
   0%, 100% { filter: drop-shadow(0 0 4px rgba(255, 184, 77, 0.3)); }
-  50% { filter: drop-shadow(0 0 10px rgba(255, 184, 77, 0.5)); }
+  50% { filter: drop-shadow(0 0 12px rgba(255, 184, 77, 0.6)); }
+}
+
+/* ── Glow ring pulse for critical nodes ─────── */
+
+@keyframes ring-pulse {
+  0%, 100% { stroke-opacity: 0; r: attr(r); }
+  50% { stroke-opacity: 0.25; }
+}
+
+.glow-ring {
+  animation: ring-pulse 2.5s ease-in-out infinite;
+}
+
+/* ── Flow particle glow ────────────────────── */
+
+.flow-particles circle {
+  filter: blur(0.5px);
 }
