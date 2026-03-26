@@ -141,6 +141,15 @@ describe('encodeNode', () => {
     expect(result.po_id).toBe('PO-001');
   });
 
+  // Regression: ISSUE-001 — closed POs had giant radius because daysStuck was high
+  // Found by /qa on 2026-03-25
+  it('encodes closed PO with minimal radius regardless of days since closure', () => {
+    const po = { po_id: 'PO-003', stage: 'closed', entered_stage_date: '2026-02-01' };
+    const result = encodeNode(po, 30, now);
+    expect(result.radius).toBe(6); // always minimum for closed
+    expect(result.opacity).toBe(0.15); // very faded
+  });
+
   it('encodes a healthy PO node', () => {
     const po = { po_id: 'PO-002', stage: 'draft', entered_stage_date: '2026-03-23' };
     const result = encodeNode(po, 30, now);
